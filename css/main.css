@@ -487,8 +487,8 @@ pre,
   margin: 20px 0;
   padding: 0;
   font-size: 13px;
-  color: #4d4d4c;
-  background: #f7f7f7;
+  color: $highlight-foreground;
+  background: $highlight-background;
   line-height: 1.6;
 }
 pre,
@@ -508,7 +508,7 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #4d4d4c;
+  color: $highlight-foreground;
   background: none;
   text-shadow: none;
 }
@@ -531,7 +531,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #4d4d4c;
+  color: $highlight-foreground;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -545,23 +545,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #4d4d4c;
+  color: $highlight-foreground;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+  border-bottom-color: $highlight-foreground;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #869194;
+  color: #999;
   text-align: right;
-  background-color: #eff2f3;
+  background-color: #f5f5f5;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #f7f7f7;
+  background-color: $highlight-background;
 }
 .highlight .line {
   height: 20px;
@@ -579,16 +579,16 @@ pre code {
   border: none;
 }
 pre .deletion {
-  background: #fdd;
+  background: #008000;
 }
 pre .addition {
-  background: #dfd;
+  background: #800000;
 }
 pre .meta {
-  color: #8959a8;
+  color: $highlight-purple;
 }
 pre .comment {
-  color: #8e908c;
+  color: $highlight-comment;
 }
 pre .variable,
 pre .attribute,
@@ -602,7 +602,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c82829;
+  color: $highlight-red;
 }
 pre .number,
 pre .preprocessor,
@@ -611,7 +611,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #f5871f;
+  color: $highlight-orange;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -624,11 +624,11 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #718c00;
+  color: $highlight-green;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #3e999f;
+  color: $highlight-aqua;
 }
 pre .function,
 pre .python .decorator,
@@ -638,11 +638,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: $highlight-blue;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #8959a8;
+  color: $highlight-purple;
 }
 .full-image.full-image.full-image.full-image {
   border: none;
@@ -747,7 +747,6 @@ pre .javascript .function {
   margin-bottom: 20px;
   border: 1px solid #eee;
   border-left-width: 5px;
-  border-radius: 3px;
 }
 .post-body .note h2,
 .post-body .note h3,
@@ -834,107 +833,6 @@ pre .javascript .function {
 .post-body .note.danger h5,
 .post-body .note.danger h6 {
   color: #d9534f;
-}
-.post-body .label {
-  display: inline;
-  padding: 0 2px;
-  white-space: nowrap;
-}
-.post-body .label.default {
-  background-color: #f0f0f0;
-}
-.post-body .label.primary {
-  background-color: #efe6f7;
-}
-.post-body .label.info {
-  background-color: #e5f2f8;
-}
-.post-body .label.success {
-  background-color: #e7f4e9;
-}
-.post-body .label.warning {
-  background-color: #fcf6e1;
-}
-.post-body .label.danger {
-  background-color: #fae8eb;
-}
-.post-body .tabs {
-  position: relative;
-  display: block;
-  margin-bottom: 20px;
-  padding-top: 10px;
-}
-.post-body .tabs ul.nav-tabs {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin-bottom: -1px;
-}
-@media (max-width: 413px) {
-  .post-body .tabs ul.nav-tabs {
-    display: block;
-    margin-bottom: 5px;
-  }
-}
-.post-body .tabs ul.nav-tabs li.tab {
-  list-style-type: none !important;
-  margin: 0 0.25em 0 0;
-  border-top: 3px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-}
-@media (max-width: 413px) {
-  .post-body .tabs ul.nav-tabs li.tab {
-    margin: initial;
-    border-top: 1px solid transparent;
-    border-left: 3px solid transparent;
-    border-right: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-  }
-}
-.post-body .tabs ul.nav-tabs li.tab a {
-  outline: 0;
-  border-bottom: initial;
-  display: block;
-  line-height: 1.8em;
-  padding: 0.25em 0.75em;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
-}
-.post-body .tabs ul.nav-tabs li.tab a i {
-  width: 1.285714285714286em;
-}
-.post-body .tabs ul.nav-tabs li.tab.active {
-  border-top: 3px solid #fc6423;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  background-color: #fff;
-}
-@media (max-width: 413px) {
-  .post-body .tabs ul.nav-tabs li.tab.active {
-    border-top: 1px solid #ddd;
-    border-left: 3px solid #fc6423;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-  }
-}
-.post-body .tabs ul.nav-tabs li.tab.active a {
-  cursor: default;
-  color: #555;
-}
-.post-body .tabs .tab-content {
-  background-color: #fff;
-}
-.post-body .tabs .tab-content .tab-pane {
-  border: 1px solid #ddd;
-  padding: 20px 20px 0 20px;
-}
-.post-body .tabs .tab-content .tab-pane:not(.active) {
-  display: none !important;
-}
-.post-body .tabs .tab-content .tab-pane.active {
-  display: block !important;
 }
 .btn {
   display: inline-block;
@@ -1514,6 +1412,9 @@ pre .javascript .function {
   font-size: 14px;
   margin-top: 2px;
 }
+.post-wordcount {
+  display: inline-block;
+}
 .post-meta-divider {
   margin: 0 0.5em;
 }
@@ -1823,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47ffc8;
+  background: #1632a2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2355,13 +2256,6 @@ pre .javascript .function {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .page-archive .archive-page-counter {
   position: relative;
