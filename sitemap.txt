@@ -1,6 +1,6 @@
 http://lsun-98.github.io/lib/reading_progress/renovate.json
-http://lsun-98.github.io/lib/reading_progress/README.html
 http://lsun-98.github.io/lib/reading_progress/package.json
+http://lsun-98.github.io/lib/reading_progress/README.html
 http://lsun-98.github.io/lib/fancybox/README.html
 http://lsun-98.github.io/lib/pace/README.html
 http://lsun-98.github.io/2025/04/24/README/
