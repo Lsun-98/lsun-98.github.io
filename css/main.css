@@ -1304,7 +1304,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #feffff;
+    background: #88ffac;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2978,4 +2978,31 @@ a:visited {
 }
 a:active {
   cursor: url("/cursor/arrow.cur"),;
+}
+.post-block {
+  background: rgba(255,255,255,0.9);
+  opacity: 0.9;
+  radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 40px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+.pagination,
+.comments {
+  opacity: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+.sidebar {
+  opacity: 0.9;
+}
+.header-inner {
+  background: rgba(255,255,255,0.9);
+}
+.popup {
+  opacity: 0.9;
 }
